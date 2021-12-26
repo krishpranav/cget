@@ -11,7 +11,9 @@ public:
 
 class HttpProtocolException : public std::runtime_error {
 public:
-
+    explicit HttpProtocolException(const std::string& message)
+        : std::runtime_error{"[HttpProtocol] " + message}
+    {}
 };
 
 class WgetException : public std::runtime_error {
