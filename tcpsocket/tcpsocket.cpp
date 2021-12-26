@@ -7,3 +7,7 @@
  * @copyright Copyright (c) 2021 Apache-2.0
  * 
  */
+
+#include "exceptions.hpp"
+#include <sstream>
+#include <cstring>
