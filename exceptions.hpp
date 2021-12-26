@@ -18,5 +18,7 @@ public:
 
 class WgetException : public std::runtime_error {
 public:
-
+    explicit WgetException(const std::string& message)
+        : std::runtime_error{"[Wget] " + message}
+    {}
 };
