@@ -36,6 +36,13 @@ namespace Network {
 
     private:
         Protocol::Host host_;
-        
+        Protocol::Port port_;
+        Path path_;
+
+        std::unique_ptr<Sockets::TcpSocket> socket_ptr;
+    
+    public:
+        const static Protocol::Port default_http_port;
+        const static size_t buffer_size_;
     };
 }
