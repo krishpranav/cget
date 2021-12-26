@@ -1,7 +1,6 @@
 /**
  * @file exceptions.hpp
  * @author Krisna Pranav
- * @brief 
  * @version 0.1
  * @date 2021-12-26
  * 
