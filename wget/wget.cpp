@@ -49,3 +49,20 @@ std::string Wget::Download(const std::string& url)
 
     return GetOutputFilePath(outfliename);
 };
+
+const std::string Wget::GetOutputFilename(const std::string& path) const
+{
+    if(path.length() == 0)
+    {
+        throw WgetException{"Can't extract filename"};
+    }
+    
+    const auto& position = path.find_last_of('/');
+    if(position == path.npos)
+    {
+        return path;
+    }else
+    {
+        return path.substr(position + 1);
+    }
+}
