@@ -37,3 +37,6 @@
 # ide cache
 .vscode/
 .idea/
+
+
+wget
